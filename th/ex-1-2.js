@@ -9,7 +9,10 @@
     - เมื่อ Algorithm นี้ทำงาน จะต้องเห็นผลลัพธ์ด้านล่าง
 */
 
-// Start coding here
+function sumOddNumber (numbers) {
+    const numberFilter = numbers.filter((num) => (num % 2 !== 0)&&((num % 3 === 0)||(num % 5 === 0))&&(num % 11 !== 0));
+    return numberFilter.reduce((acc,curr) => acc + curr,0);
+}
 
 const numbers1 = [1, 2, 3, 5, 6, 8, 11, 13];
 console.log(sumOddNumber(numbers1)); // 8 จาก [3, 5]
